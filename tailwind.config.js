@@ -15,6 +15,11 @@ export default {
           "80%": { transform: "rotate(20deg)" },
         },
       },
+
+      scale: {
+        '175': '1.75', 
+        '300': '3.00'
+      },
     },
   },
   plugins: [],
