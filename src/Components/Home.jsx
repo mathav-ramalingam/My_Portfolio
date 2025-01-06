@@ -7,7 +7,7 @@ import { About } from './About'
 export const Home = () => {
   return (
     <>
-      <main className="block lg:flex bg-[#1a1a1a] md:pb-16">
+      <main className="block lg:flex bg-[#1a1a1a] md:pb-20">
         <div className="p-5 pt-14 pl-14 lg:w-1/2 md:p-32 md:pt-44 md:pl-28 ">
         <h1 className="text-2xl md:text-5xl  flex font-bold tracking-tight text-white font-sans">Hi, I'm</h1>
           <h1 className="mt-2 text-2xl md:text-5xl md:mt-4  flex font-bold tracking-tight text-white font-sans">
@@ -78,11 +78,12 @@ export const Home = () => {
             src={profile}
             className="w-72 md:w-96 rounded-full grayscale-0 hover:grayscale "
           ></img>
-          <button className="absolute bottom-5 md:-bottom-5 right-5">
+          <a href="/about"  className="absolute bottom-5 md:-bottom-10 right-5">
             <BiSolidDownArrowCircle className="size-12 text-white" />
-          </button>
+          </a>
         </div>
       </main>
+
     </>
   );
 };

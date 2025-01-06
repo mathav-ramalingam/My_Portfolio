@@ -15,7 +15,7 @@ export const Navbar = () => {
     <>
       <nav>
         {/* Desktop Navbar */}
-        <div className="hidden lg:flex bg-[#1a1a1a] p-4 items-center">
+        <div className="sticky top-0 z-50 hidden lg:flex bg-[#1a1a1a] p-4 items-center shadow-md">
           <div className="flex items-end w-2/5 text-white text-2xl pl-16">
             <div>
               <FaChevronLeft className="h-8 w-7 text-violet-600" />
@@ -94,37 +94,37 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-[#1a1a1a] text-white  text-xl px-7 pb-2 space-y-4 ">
             <a
-              hef="/"
+              href="/"
               className="block rounded-md px-3 py-2 pt-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Home
             </a>
             <a
-              hef="/about"
+              href="/about"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               About
             </a>
             <a
-              hef="/skill"
+              href="/skill"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Skill
             </a>
             <a
-              hef="/certifications"
+              href="/certifications"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Certifications
             </a>
             <a
-              hef="/project"
+              href="/project"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Project
             </a>
             <a
-              hef="/contact"
+              href="/contact"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Contact
