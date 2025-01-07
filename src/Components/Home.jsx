@@ -3,6 +3,7 @@ import profile from "../assets/Image/profile.png";
 import { BiSolidDownArrowCircle } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
 import { About } from './About'
+import { Skills } from "./Skills";
 
 export const Home = () => {
   return (
@@ -83,6 +84,8 @@ export const Home = () => {
           </a>
         </div>
       </main>
+        <About />
+        <Skills />
 
     </>
   );

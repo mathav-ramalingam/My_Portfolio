@@ -10,7 +10,7 @@ export const About = () => {
         <div className="pt-4 lg:p-20 lg:w-3/4 lg:pt-16">
           <img
             src={gif}
-            className="w-auto md:max-w-2xl md:rounded-[50px]"
+            className="w-auto md:max-w-2xl md:rounded-[50px] "
             alt="About gif"
           ></img>
         </div>
@@ -29,7 +29,7 @@ export const About = () => {
               <a
                 download
                 href=""
-                className="flex items-center justify-center bg-white text-black font-medium px-4 py-3 rounded-2xl shadow-mdtransition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300 w-fit"
+                className="flex items-center justify-center bg-white text-black font-medium px-4 py-3 rounded-2xl shadow-mdtransition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300 w-fit animate-pulse"
               >
                 <IoDocumentTextOutline className="mr-2 text-lg" />
                 Download CV

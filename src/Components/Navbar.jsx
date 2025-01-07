@@ -13,9 +13,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav className="sticky top-0 z-50">
         {/* Desktop Navbar */}
-        <div className="sticky top-0 z-50 hidden lg:flex bg-[#1a1a1a] p-4 items-center shadow-md">
+        <div className=" hidden lg:flex bg-[#1a1a1a] p-4 items-center shadow-md">
           <div className="flex items-end w-2/5 text-white text-2xl pl-16">
             <div>
               <FaChevronLeft className="h-8 w-7 text-violet-600" />
@@ -36,7 +36,7 @@ export const Navbar = () => {
                 <a href="/about">About</a>
               </li>
               <li>
-                <a href="/skill">Skill</a>
+                <a href="/skills">Skills</a>
               </li>
               <li>
                 <a href="/certifications">Certifications</a>
@@ -106,7 +106,7 @@ export const Navbar = () => {
               About
             </a>
             <a
-              href="/skill"
+              href="/skills"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Skill
