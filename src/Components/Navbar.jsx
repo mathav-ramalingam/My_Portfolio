@@ -33,19 +33,19 @@ export const Navbar = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="/skills">Skills</a>
+                <a href="#skills">Skills</a>
               </li>
               <li>
-                <a href="/certifications">Certifications</a>
+                <a href="#certifications">Certifications</a>
               </li>
               <li>
-                <a href="/project">Project</a>
+                <a href="#project">Project</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ol>
           </div>
@@ -100,31 +100,31 @@ export const Navbar = () => {
               Home
             </a>
             <a
-              href="/about"
+              href="#about"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               About
             </a>
             <a
-              href="/skills"
+              href="#skills"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Skill
             </a>
             <a
-              href="/certifications"
+              href="#certifications"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Certifications
             </a>
             <a
-              href="/project"
+              href="#project"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Project
             </a>
             <a
-              href="/contact"
+              href="#contact"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Contact

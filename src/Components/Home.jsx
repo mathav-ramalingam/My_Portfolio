@@ -8,18 +8,19 @@ import { Skills } from "./Skills";
 export const Home = () => {
   return (
     <>
-      <main className="block lg:flex bg-[#1a1a1a] md:pb-20">
-        <div className="p-5 pt-14 pl-14 lg:w-1/2 md:p-32 md:pt-44 md:pl-28 ">
+
+      <main className="block lg:flex bg-yellow-700 ">
+        <div className="p-5 pt-14 pl-14 lg:w-1/2 md:p-32 md:pt-44 bg-green-600 ">
         <h1 className="text-2xl md:text-5xl  flex font-bold tracking-tight text-white font-sans">Hi, I'm</h1>
-          <h1 className="mt-2 text-2xl md:text-5xl md:mt-4  flex font-bold tracking-tight text-white font-sans">
-            Mathav Ramalingam
+          <h1 className="mt-2 text-2xl md:text-5xl md:mt-4  flex font-bold tracking-tight text-white font-sans gap-3">
+            Mathav <span className="flex ">Ramalingam
             <svg
               width="36"
               height="36"
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 md:ml-4 w-6 h-8 md:w-10 md:h-14 hover:animate-handshake "
+              className="ml-2 md:ml-4 w-6 h-8 md:w-10 md:h-14 hover:animate-handshake"
             >
               <path
                 d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -62,6 +63,7 @@ export const Home = () => {
                 fill="#EBA352"
               ></path>
             </svg>
+            </span>
           </h1>
           <h1 className="mt-2 text-2xl md:mt-4 md:text-5xl font-bold tracking-tight font-sans text-white">
             <Typewriter 
@@ -73,19 +75,21 @@ export const Home = () => {
             />
           </h1>
         </div>
-
-        <div className="relative p-14 lg:w-1/2 md:px-44 md:pt-24">
+      <diV className=" p-10 lg:w-1/2 md:px-44 md:pt-24  bg-red-700 md:mb-16">
+        <div>
           <img
             src={profile}
-            className="w-72 md:w-96 rounded-full grayscale-0 hover:grayscale "
-          ></img>
-          <a href="/about"  className="absolute bottom-5 md:-bottom-10 right-5">
-            <BiSolidDownArrowCircle className="size-12 text-white" />
-          </a>
+            className="w-96 md:w-auto rounded-full grayscale-0 hover:grayscale "
+          >
+          </img>
         </div>
+          <div className="absolute hidden md:flex justify-end md:p-0 md:m-0  ">
+          <a href="/"><BiSolidDownArrowCircle className="size-12 text-white md:mr-0 " /></a>
+          </div>
+        </diV>
       </main>
-        <About />
-        <Skills />
+      <About />
+      <Skills />
 
     </>
   );
