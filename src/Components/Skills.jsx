@@ -14,7 +14,6 @@ import vs from "../assets/Image/vs.png";
 import dj from "../assets/Image/dj.png";
 import mdb from "../assets/Image/mongodb.png";
 import t from "../assets/Image/tailwind-css.png";
-import my from "../assets/Image/mysql.png";
 import e from "../assets/Image/express.png";
 import p from "../assets/Image/postman.png";
 import mysql from "../assets/Image/mysql.png";
@@ -101,7 +100,7 @@ export const Skills = () => {
               <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 text-white">Others</div>
               <div className="p-4 grid grid-cols-2 md:grid md:grid-cols-2 gap-2 content-center md:p-6">
                   <div className="text-sm py-2 flex items-center justify-center bg-transparent text-white font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img src={py} className="text-base mr-2 md:text-lg size-5" />
+                  <img src={py} className="text-base mr-2 md:text-lg size-5 animate-flip" />
                   Python
                   </div>
                   <div className="text-sm py-2 flex items-center justify-center bg-transparent text-white font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">

@@ -4,6 +4,7 @@ import { BiSolidDownArrowCircle } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
 import { About } from './About'
 import { Skills } from "./Skills";
+import { Project } from "./Project";
 
 export const Home = () => {
   return (
@@ -90,6 +91,7 @@ export const Home = () => {
       </main>
       <About />
       <Skills />
+      <Project />
 
     </>
   );

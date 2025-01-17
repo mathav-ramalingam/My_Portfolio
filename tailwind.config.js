@@ -31,9 +31,15 @@ export default {
           '0%': { transform: 'translateY(25%)' },
           '100%': { transform: 'translateY(0)' },
         },
+
         zoomIn: {
           '0%': { transform: 'scale(0)' },
           '100%': { transform: 'scale(1)' },
+        },
+
+        flip: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '50%': { transform: 'rotateY(90deg)' },
         },
 
       },
@@ -56,9 +62,24 @@ export default {
         'slidedown': 'slidedown 0.5s ease-out',
         'handshake': "shake 1s ease-in-out 0.1s 3",
         'zoomIn': 'zoomIn 2s ease-out',
-      }
+        'flip': 'flip 1.5s linear infinite',
+      },
 
-      
+
+      transformOrigin: {
+        'center': 'center',
+      },
+      perspective: {
+        1000: '1000px',
+      },
+      rotate: {
+        'y-180': 'rotateY(180deg)', // Add custom rotateY transform
+        'y-0': 'rotateY(0deg)',
+      },
+      transformStyle: {
+        '3d': 'preserve-3d', // Ensure 3D transforms work
+      },
+
     },
   },
   plugins: [],
