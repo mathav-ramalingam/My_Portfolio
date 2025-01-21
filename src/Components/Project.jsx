@@ -2,7 +2,7 @@ import React from "react";
 
 export const Project = () => {
   return (
-    <div id="project" className="bg-[#1a1a1a]">
+    <div id="project" className="bg-red-700">
       <div className="p-2 pb-8 py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-4 bg-[#1a1a1a] text-white">
         Projects
       </div>

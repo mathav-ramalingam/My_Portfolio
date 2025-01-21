@@ -10,18 +10,23 @@ export const Home = () => {
   return (
     <>
 
-      <main className="block lg:flex bg-yellow-700 ">
-        <div className="p-5 pt-14 pl-14 lg:w-1/2 md:p-32 md:pt-44 bg-green-600 ">
-        <h1 className="text-2xl md:text-5xl  flex font-bold tracking-tight text-white font-sans">Hi, I'm</h1>
-          <h1 className="mt-2 text-2xl md:text-5xl md:mt-4  flex font-bold tracking-tight text-white font-sans gap-3">
-            Mathav <span className="flex ">Ramalingam
+      <main className="block lg:flex bg-[#1a1a1a] ">
+        {/* Left Section */}
+        <div className="p-5 pt-14 pl-14 md:pl-20 lg:w-1/2 md:p-20 ">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans  lg:pt-24 ">
+            Hi, I'm
+          </h1>
+          <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl flex font-bold tracking-tight text-white font-sans gap-3">
+            Mathav{" "}
+            <span className="flex">
+              Ramalingam
             <svg
-              width="36"
-              height="36"
+              width="28"
+              height="28"
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 md:ml-4 w-6 h-8 md:w-10 md:h-14 hover:animate-handshake"
+              className="ml-2 w-6 h-8 md:ml-4 md:w-8 md:h-14 lg:w-10 lg:h-16 hover:animate-handshake"
             >
               <path
                 d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -66,7 +71,7 @@ export const Home = () => {
             </svg>
             </span>
           </h1>
-          <h1 className="mt-2 text-2xl md:mt-4 md:text-5xl font-bold tracking-tight font-sans text-white">
+          <h1 className="mt-4 text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans text-white pb-6">
             <Typewriter 
               options={{
                 strings: ["empty </> ", "Developer"],
@@ -76,19 +81,26 @@ export const Home = () => {
             />
           </h1>
         </div>
-      <diV className=" p-10 lg:w-1/2 md:px-44 md:pt-24  bg-red-700 md:mb-16">
+
+
+
+        {/*Right */}
+      <diV className="relative p-4 lg:w-1/2 flex flex-col items-center md:px-20 md:pt-16 lg:pt-24 md:pb-16 lg:pb-28 ">
         <div>
           <img
             src={profile}
-            className="w-96 md:w-auto rounded-full grayscale-0 hover:grayscale "
+            className="w-80 md:w-96 lg:w-96 rounded-full grayscale-0 hover:grayscale "
           >
           </img>
         </div>
-          <div className="absolute hidden md:flex justify-end md:p-0 md:m-0  ">
-          <a href="/"><BiSolidDownArrowCircle className="size-12 text-white md:mr-0 " /></a>
+          <div className="absolute bottom-4 right-4 hidden sm:block">
+          <a href="#about"><BiSolidDownArrowCircle className="text-white text-5xl hover:scale-110 transition" /></a>
           </div>
         </diV>
       </main>
+
+
+      
       <About />
       <Skills />
       <Project />

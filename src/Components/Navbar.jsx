@@ -15,7 +15,7 @@ export const Navbar = () => {
     <>
       <nav className="sticky top-0 z-50">
         {/* Desktop Navbar */}
-        <div className=" hidden lg:flex bg-[#1a1a1a] p-4 items-center shadow-md">
+        <div className=" hidden lg:flex bg-[#1a1a1a] p-4  items-center shadow-md">
           <div className="flex items-end w-2/5 text-white text-2xl pl-16">
             <div>
               <FaChevronLeft className="h-8 w-7 text-violet-600" />
