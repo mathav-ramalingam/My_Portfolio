@@ -93,7 +93,7 @@ export const Home = () => {
           >
           </img>
         </div>
-          <div className="absolute bottom-4 right-4 hidden sm:block">
+          <div className="absolute bottom-4 right-4 hidden sm:block cursor-pointer hover:scale-110 transition-transform">
           <a href="#about"><BiSolidDownArrowCircle className="text-white text-5xl hover:scale-110 transition" /></a>
           </div>
         </diV>

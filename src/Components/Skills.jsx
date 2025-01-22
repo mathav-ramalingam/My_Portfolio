@@ -27,8 +27,8 @@ export const Skills = () => {
         <div className="p-2 pb-8  py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-1 bg-[#1a1a1a] text-white gap-2">
           Professional<span className=" text-violet-600"> Skillset</span>
         </div>
-        <div className="md:grid grid-cols-2 gap-6 px-4 md:px-16  ">
-          <div className="mb-10  md:mb-0 ">
+        <div className="md:grid grid-cols-2 gap-10 px-4 md:px-16  ">
+          <div className="mb-10  md:mb-0  ">
             <div className=" bg-[#1a1a1a] rounded-3xl md:py-1 md:mt-8 border-cyan-300 border-2 shadow-custom animate-slideIn">
               <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl text-white md:pt-2 pt-2">
                 Frontend
@@ -112,7 +112,7 @@ export const Skills = () => {
                 <div className="text-sm py-2 flex items-center justify-center bg-transparent text-white font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
                   <img
                     src={py}
-                    className="text-base mr-2 md:text-lg size-5 animate-flip"
+                    className="text-base mr-2 md:text-lg size-5 animate-flipp"
                   />
                   Python
                 </div>
@@ -135,7 +135,7 @@ export const Skills = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block absolute bottom-4 -left-11">
+            <div className="hidden md:block absolute bottom-4 -left-11 cursor-pointer hover:scale-110 transition-transform">
               <a href="#about">
                 <BiSolidUpArrowCircle className="size-12 text-white" />
               </a>
@@ -143,7 +143,7 @@ export const Skills = () => {
           </div>
 
           <div className="relative">
-            <div className="mx-8 my-6 bg-[#1a1a1a] md:py-1 md:mt-8 border-cyan-200 border-2 shadow-custom rounded-3xl  animate-slideup">
+            <div className="mx-8  bg-[#1a1a1a] md:py-1 md:mt-8 border-cyan-200 border-2 shadow-custom rounded-3xl  animate-slideup">
               <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2 text-white">
                 Tools I Use
               </div>
@@ -173,8 +173,8 @@ export const Skills = () => {
               </div>
             </div>
 
-            <div className="hidden md:block absolute bottom-4 -right-11">
-              <a href="/">
+            <div className="hidden md:block absolute bottom-4 -right-11 cursor-pointer hover:scale-110 transition-transform">
+              <a href="#project">
                 <BiSolidDownArrowCircle className="size-12 text-white " />
               </a>
             </div>

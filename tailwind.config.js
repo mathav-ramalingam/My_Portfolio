@@ -37,7 +37,7 @@ export default {
           '100%': { transform: 'scale(1)' },
         },
 
-        flip: {
+        flipp: {
           '0%': { transform: 'rotateY(0deg)' },
           '50%': { transform: 'rotateY(90deg)' },
         },
@@ -62,23 +62,18 @@ export default {
         'slidedown': 'slidedown 0.5s ease-out',
         'handshake': "shake 1s ease-in-out 0.1s 3",
         'zoomIn': 'zoomIn 2s ease-out',
-        'flip': 'flip 1.5s linear infinite',
+        'flipp': 'flipp 1.5s linear infinite',
+        'flip': 'rotateY 0.6s linear',
       },
 
-
-      transformOrigin: {
-        'center': 'center',
-      },
-      perspective: {
-        1000: '1000px',
-      },
-      rotate: {
-        'y-180': 'rotateY(180deg)', // Add custom rotateY transform
-        'y-0': 'rotateY(0deg)',
+      backfaceVisibility: {
+        hidden: "hidden",
+        visible: "visible",
       },
       transformStyle: {
-        '3d': 'preserve-3d', // Ensure 3D transforms work
+        'preserve-3d': 'preserve-3d',
       },
+
 
     },
   },

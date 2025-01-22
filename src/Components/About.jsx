@@ -18,8 +18,8 @@ export const About = () => {
             className="w-full max-w-sm sm:max-w-md md:max-w-2xl rounded-[50px] animate-zoomIn"
             alt="About gif"
           ></img>
-
-          <div className="hidden lg:flex absolute bottom-8 left-5">
+ 
+          <div className="hidden lg:flex absolute bottom-8 left-5 cursor-pointer hover:scale-110 transition-transform">
           <a href="/"><BiSolidUpArrowCircle className="text-5xl text-white" /></a>
           </div>
         </div>
@@ -48,7 +48,7 @@ export const About = () => {
           {/* <a href="#skills" className="absolute bottom-10 md:bottom-10 right-5">
             <BiSolidDownArrowCircle className="size-12 text-white" />
           </a> */}
-          <div className="hidden lg:flex justify-end absolute bottom-8 right-5">
+          <div className="hidden lg:flex justify-end absolute bottom-8 right-5 cursor-pointer hover:scale-110 transition-transform">
           <a href="#skills"><BiSolidDownArrowCircle className="text-5xl text-white " /></a>
           </div>
         </div>
