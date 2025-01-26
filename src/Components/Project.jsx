@@ -11,8 +11,8 @@ export const Project = () => {
   return (
     <>
       <div id="project" className=" relative">
-        <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 text-white bg-[#1a1a1a] ">
-          Projects
+        <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 text-white bg-[#1a1a1a] gap-2 ">
+          My<span className=" text-violet-600">Projects</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  bg-[#1a1a1a]  p-8 ">
@@ -328,7 +328,7 @@ export const Project = () => {
 
           {/* Down Arrow */}
           <div className="hidden md:block  pr-5 ">
-            <a href="#skills">
+            <a href="#contact">
               <BiSolidDownArrowCircle className="size-12 text-white cursor-pointer hover:scale-110 transition-transform " />
             </a>
           </div>

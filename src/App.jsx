@@ -7,6 +7,7 @@ import { Certifications } from './Components/Certifications'
 import { Project } from './Components/Project'
 import { Contact } from './Components/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Footer } from './Components/Footer'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Route path='/project' element={<Project />} />
       <Route path='/contact' element={<Contact />} />
     </Routes>
+    <Footer />
     </BrowserRouter>
 
     </>
