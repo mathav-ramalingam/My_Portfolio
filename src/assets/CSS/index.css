@@ -10,5 +10,6 @@ html {
 
 #about, #skills, #projects, #contact, #home{
     scroll-behavior: smooth;
+
 }
   

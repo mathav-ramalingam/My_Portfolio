@@ -11,13 +11,13 @@ export const Home = () => {
   return (
     <>
 
-      <main className="block lg:flex bg-[#1a1a1a] " id="home">
+      <main className="block lg:flex bg-white dark:bg-[#1a1a1a] text-black dark:text-white " id="home">
         {/* Left Section */}
         <div className="p-5 pt-14 pl-14 md:pl-20 lg:w-1/2 md:p-20 ">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans  lg:pt-24 ">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight  font-sans  lg:pt-24 ">
             Hi, I'm
           </h1>
-          <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl flex font-bold tracking-tight text-white font-sans gap-3">
+          <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl flex font-bold tracking-tight  font-sans gap-3  ">
             Mathav{" "}
             <span className="flex">
               Ramalingam
@@ -72,7 +72,7 @@ export const Home = () => {
             </svg>
             </span>
           </h1>
-          <h1 className="mt-4 text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans text-white pb-6">
+          <h1 className="mt-4 text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans  pb-6">
             <Typewriter 
               options={{
                 strings: ["empty </> ", "Developer"],
@@ -95,7 +95,7 @@ export const Home = () => {
           </img>
         </div>
           <div className="absolute bottom-4 right-4 hidden sm:block cursor-pointer hover:scale-110 transition-transform">
-          <a href="#about"><BiSolidDownArrowCircle className="text-white text-5xl hover:scale-110 transition" /></a>
+          <a href="#about"><BiSolidDownArrowCircle className=" text-5xl hover:scale-110 transition" /></a>
           </div>
         </diV>
       </main>

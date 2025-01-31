@@ -10,12 +10,12 @@ import { IoIosRocket } from "react-icons/io";
 export const Project = () => {
   return (
     <>
-      <div id="project" className=" relative">
-        <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 text-white bg-[#1a1a1a] gap-2 ">
+      <div id="project" className=" relative bg-white dark:bg-[#1a1a1a] text-black dark:text-white " >
+        <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 gap-2 ">
           My<span className=" text-violet-600">Projects</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  bg-[#1a1a1a]  p-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8    p-8 ">
           {/* Card 1 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
@@ -319,17 +319,17 @@ export const Project = () => {
         </div>
 
 
-        <div className="bg-[#1a1a1a]   flex justify-between">
+        <div className=" flex justify-between">
           <div className="hidden md:block  pl-6 ">
             <a href="#skills">
-              <BiSolidUpArrowCircle className="size-12 text-white cursor-pointer hover:scale-110 transition-transform " />
+              <BiSolidUpArrowCircle className="size-12  cursor-pointer hover:scale-110 transition-transform " />
             </a>
           </div>
 
           {/* Down Arrow */}
           <div className="hidden md:block  pr-5 ">
             <a href="#contact">
-              <BiSolidDownArrowCircle className="size-12 text-white cursor-pointer hover:scale-110 transition-transform " />
+              <BiSolidDownArrowCircle className="size-12 cursor-pointer hover:scale-110 transition-transform " />
             </a>
           </div>
         </div>

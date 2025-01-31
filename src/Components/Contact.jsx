@@ -37,8 +37,8 @@ export const Contact = () => {
 
   return (
     <>
-      <div id="contact" className="bg-[#1a1a1a] lg:pb-10">
-        <div className="p-2 pb-8 py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl lg:py-16 bg-[#1a1a1a] text-white gap-2">
+      <div id="contact" className="bg-white dark:bg-[#1a1a1a] text-black dark:text-white  lg:pb-10">
+        <div className="p-2 pb-8 py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl lg:py-16  gap-2">
           Get in <span className=" text-violet-600">Touch</span>
         </div>
         <div className=" flex flex-col lg:flex-row gap-8 ">
@@ -46,7 +46,7 @@ export const Contact = () => {
           <div className="flex-1">
             <div className="grid gap-7 justify-center items-center lg:m-10 lg:ml-40 p-2">
               {/* Email Card */}
-              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 border-gray-300 ">
+              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 dark:border-gray-300  border-black">
                 <MdOutgoingMail className="text-4xl text-white" />
                 <div>
                   <h3 className="font-bold tracking-tight font-sans text-white">
@@ -66,7 +66,7 @@ export const Contact = () => {
               </div>
 
               {/* WhatsApp Card */}
-              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 border-gray-300">
+              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 dark:border-gray-300  border-black">
                 <FaWhatsapp className="text-4xl text-white" />
                 <div>
                   <h3 className="font-bold tracking-tight font-sans text-white">
@@ -91,7 +91,7 @@ export const Contact = () => {
 
 
               {/* Linkedin Card */}
-              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 border-gray-300">
+              <div className="flex items-center gap-4 p-4 shadow-md rounded-lg bg-[#262626] border-2 dark:border-gray-300  border-black">
                 <CiLinkedin className="text-4xl text-white" />
                 <div>
                   <h3 className="font-bold tracking-tight font-sans text-white">
@@ -126,7 +126,7 @@ export const Contact = () => {
               <div className="grid gap-1">
                 <label
                   htmlFor="name"
-                  className="font-extrabold tracking-tight font-sans text-white"
+                  className="font-extrabold tracking-tight font-sans "
                 >
                   Name
                 </label>
@@ -136,7 +136,7 @@ export const Contact = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border border-white text-white rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
+                  className="p-3 dark:bg-[#1a1a1a] border dark:border-white border-black rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Enter your name"
                   required
                 />
@@ -146,7 +146,7 @@ export const Contact = () => {
               <div className="grid gap-1">
                 <label
                   htmlFor="email"
-                  className="font-extrabold tracking-tight font-sans text-white"
+                  className="font-extrabold tracking-tight font-sans "
                 >
                   Email
                 </label>
@@ -156,7 +156,7 @@ export const Contact = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
+                  className="p-3 dark:bg-[#1a1a1a] border dark:border-white border-black rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Enter your email"
                   required
                 />
@@ -166,7 +166,7 @@ export const Contact = () => {
               <div className="grid gap-1">
                 <label
                   htmlFor="project"
-                  className="font-extrabold tracking-tight font-sans text-white"
+                  className="font-extrabold tracking-tight font-sans "
                 >
                   Message
                 </label>
@@ -175,7 +175,7 @@ export const Contact = () => {
                   id="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
+                  className="p-3 dark:bg-[#1a1a1a] border dark:border-white border-black rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Your message"
                   rows="4"
                   required
@@ -184,7 +184,7 @@ export const Contact = () => {
 
               {/* Submit Button */}
               <button
-                className="button flex items-center justify-center bg-white text-black font-medium px-4 py-3 rounded-2xl shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-300 w-fit animate-pulse"
+                className="button flex items-center justify-center bg-black text-white dark:bg-white dark:text-black font-medium px-4 py-3 rounded-2xl shadow-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-black dark:hover:bg-gray-300 duration-300 w-fit animate-pulse"
                 type="submit"
               >
                 Send Message
