@@ -30,7 +30,7 @@ export const Navbar = () => {
           <div className="w-3/5 text-white text-xl pr-16 font-bold">
             <ol className="lg:flex gap-10 justify-end">
               <li>
-                <a href="/">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
                 <a href="#about">About</a>
@@ -38,9 +38,7 @@ export const Navbar = () => {
               <li>
                 <a href="#skills">Skills</a>
               </li>
-              <li>
-                <a href="#certifications">Certifications</a>
-              </li>
+
               <li>
                 <a href="#project">Project</a>
               </li>
@@ -94,7 +92,7 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-[#1a1a1a] text-white  text-xl px-7 pb-2 space-y-4 ">
             <a
-              href="/"
+              href="#home"
               className="block rounded-md px-3 py-2 pt-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
               Home
@@ -111,12 +109,7 @@ export const Navbar = () => {
             >
               Skill
             </a>
-            <a
-              href="#certifications"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >
-              Certifications
-            </a>
+           
             <a
               href="#project"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"

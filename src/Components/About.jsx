@@ -20,13 +20,13 @@ export const About = () => {
           ></img>
  
           <div className="hidden lg:flex absolute bottom-8 left-5 cursor-pointer hover:scale-110 transition-transform">
-          <a href="/"><BiSolidUpArrowCircle className="text-5xl text-white" /></a>
+          <a href="#home"><BiSolidUpArrowCircle className="text-5xl text-white" /></a>
           </div>
         </div>
 
         <div className="relative lg:w-1/2 pb-2 px-6 ">
           <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8 lg:mt-28 font-bold tracking-tight font-sans text-white animate-slidedown">
-            <p className="text-xl md:text-2xl justify-self-auto">
+            <p className="text-xl md:text-2xl justify-self-auto ">
               I am a passionate developer with an interest in{" "}
               <span className="text-violet-500">
                 Python, Computer Network and Backend Development{" "}

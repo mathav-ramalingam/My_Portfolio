@@ -6,23 +6,23 @@ import { FaGithubSquare } from "react-icons/fa";
 export const Footer = () => {
   return (
     <>
-      <div class="p-4 text-center bg-[#1a1a1a] ">
+      <div class="p-4 text-center bg-[#1a1a1a] show shadow-[0_-4px_10px_rgba(0,0,0,0.5)] ">
         <div class="flex flex-col items-center">
           <div class="text-xl font-bold tracking-tight font-sans mb-2 text-white">Mathav Ramalingam</div>
           <div class="flex space-x-4">
             <a
               href="https://www.linkedin.com/in/mathav-ramalingam/"
               target="_blank"
-              class="text-white hover:text-violet-500"
+              class="text-white hover:text-blue-500"
             >
              <FaLinkedin className="h-7 w-5"/>
             </a>
             <a
-              href="https://www.linkedin.com/in/mathav-ramalingam/"
+              href="https://github.com/mathav-ramalingam"
               target="_blank"
               class="text-white hover:text-violet-500"
             >
-             <FaGithubSquare className="h-7 w-5"/>
+             <FaGithubSquare className="h-7 w-6"/>
             </a>
             <a
               href="mailto:mathavramalingam1608@gmail.com"
@@ -35,7 +35,7 @@ export const Footer = () => {
         </div>
 
         <nav class="flex justify-center mt-4 space-x-6">
-          <a href="/" class="text-white hover:text-violet-600 font-bold tracking-tight font-sans">
+          <a href="#home" class="text-white hover:text-violet-600 font-bold tracking-tight font-sans">
             Home
           </a>
           <a href="#about" class="text-white hover:text-violet-600 font-bold tracking-tight font-sans">
@@ -58,7 +58,7 @@ export const Footer = () => {
           </a>
         </nav>
 
-        <p class="mt-4 text-sm text-white hover:text-violet-600 font-bold tracking-tight font-sans">
+        <p class="mt-4 text-sm text-white font-bold tracking-tight font-sans">
           © 2025 Mathav Ramalingam. All rights reserved.
         </p>
       </div>

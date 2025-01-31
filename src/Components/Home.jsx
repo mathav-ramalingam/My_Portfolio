@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
 
-      <main className="block lg:flex bg-[#1a1a1a] ">
+      <main className="block lg:flex bg-[#1a1a1a] " id="home">
         {/* Left Section */}
         <div className="p-5 pt-14 pl-14 md:pl-20 lg:w-1/2 md:p-20 ">
           <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white font-sans  lg:pt-24 ">

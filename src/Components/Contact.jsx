@@ -118,12 +118,12 @@ export const Contact = () => {
           {/*Right */}
           {/* Contact Form */}
           <form
-            className="flex-1  p-6 shadow-md rounded-lg m-2 lg:mr-20"
+            className="flex-1  p-6  m-2 lg:mr-20 "
             onSubmit={handleSubmit}
           >
-            <div className="grid gap-4 mx-16 lg:mx-32">
+            <div className="grid gap-4 mx-10 lg:mx-32">
               {/* Name Field */}
-              <div className="grid">
+              <div className="grid gap-1">
                 <label
                   htmlFor="name"
                   className="font-extrabold tracking-tight font-sans text-white"
@@ -136,14 +136,14 @@ export const Contact = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border border-white text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-400"
+                  className="p-3 bg-[#1a1a1a] border border-white text-white rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Enter your name"
                   required
                 />
               </div>
 
               {/* Email Field */}
-              <div className="grid">
+              <div className="grid gap-1">
                 <label
                   htmlFor="email"
                   className="font-extrabold tracking-tight font-sans text-white"
@@ -156,14 +156,14 @@ export const Contact = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-400"
+                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Enter your email"
                   required
                 />
               </div>
 
               {/* Project Field */}
-              <div className="grid">
+              <div className="grid gap-1">
                 <label
                   htmlFor="project"
                   className="font-extrabold tracking-tight font-sans text-white"
@@ -175,7 +175,7 @@ export const Contact = () => {
                   id="project"
                   value={formData.project}
                   onChange={handleChange}
-                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-400"
+                  className="p-3 bg-[#1a1a1a] border text-white border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-violet-400"
                   placeholder="Your message"
                   rows="4"
                   required

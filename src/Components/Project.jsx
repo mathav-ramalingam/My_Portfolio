@@ -17,7 +17,7 @@ export const Project = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  bg-[#1a1a1a]  p-8 ">
           {/* Card 1 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -57,7 +57,7 @@ export const Project = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -101,7 +101,7 @@ export const Project = () => {
 
 
           {/* Card 3 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -157,7 +157,7 @@ export const Project = () => {
 
 
            {/* Card 4 */}
-           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -212,7 +212,7 @@ export const Project = () => {
 
 
           {/* Card 5 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -265,7 +265,7 @@ export const Project = () => {
           </div>
 
           {/* Card 6 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-red-700 transition-shadow rounded-2xl">
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
