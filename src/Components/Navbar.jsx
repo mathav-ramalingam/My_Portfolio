@@ -65,18 +65,19 @@ export const Navbar = () => {
             </h1>
             <FaChevronRight className="h-8 w-5 text-violet-600" />
           </div>
+          <div >
           <button
                   onClick={toggleTheme}
-                  className="p-1 rounded-full focus:outline-none transition"
+                  className="rounded-full focus:outline-none transition w-14 "
                 >
                   {theme === "dark" ? (
-                    <FaSun className="text-yellow-500" size={24} />
+                    <FaSun className="text-yellow-500 h-7 w-8"  />
                   ) : (
-                    <FaMoon className="text-gray-800" size={24} />
+                    <FaMoon className="text-gray-800 h-7 w-8"  />
                   )}
                 </button>
           <button
-            className="p-2 rounded-md focus:outline-none"
+            className="rounded-md focus:outline-none transition"
             onClick={toggleMenu}
           >
             {isMenuOpen ? (
@@ -98,23 +99,23 @@ export const Navbar = () => {
               </svg>
             )}
           </button>
-         
+          </div>
         </div>
         {isMenuOpen && (
           <div className="lg:hidden bg-white dark:bg-[#1a1a1a] text-black dark:text-white   text-xl px-7 pb-2 space-y-4">
-            <a href="#home" className="block px-3 py-2 hover:bg-gray-700">
+            <a href="#home" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Home
             </a>
-            <a href="#about" className="block px-3 py-2 hover:bg-gray-700">
+            <a href="#about" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               About
             </a>
-            <a href="#skills" className="block px-3 py-2 hover:bg-gray-700">
+            <a href="#skills" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Skills
             </a>
-            <a href="#project" className="block px-3 py-2 hover:bg-gray-700">
+            <a href="#project" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Project
             </a>
-            <a href="#contact" className="block px-3 py-2 hover:bg-gray-700">
+            <a href="#contact" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Contact
             </a>
           </div>

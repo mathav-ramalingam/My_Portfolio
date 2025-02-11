@@ -38,7 +38,7 @@ export const About = () => {
             <div className="mt-5 md:mt-7">
               <a
                 download
-                href=""
+                href="/assets/Mathav_CV.pdf"
                 className="flex items-center justify-center bg-[#1a1a1a] text-white dark:bg-white dark:text-black font-medium px-4 py-3 rounded-2xl shadow-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-black dark:hover:bg-gray-300 duration-300 w-fit animate-pulse"
               >
                 <IoDocumentTextOutline className="mr-2 text-lg" />

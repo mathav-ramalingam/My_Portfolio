@@ -13,11 +13,11 @@ export const Home = () => {
 
       <main className="block lg:flex bg-white dark:bg-[#1a1a1a] text-black dark:text-white " id="home">
         {/* Left Section */}
-        <div className="p-5 pt-14 pl-14 md:pl-20 lg:w-1/2 md:p-20 ">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight  font-sans  lg:pt-24 ">
+        <div className="p-5 pt-14 pl-14 md:pl-24 lg:w-1/2 md:p-20">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight  font-sans  lg:pt-24 ">
             Hi, I'm
           </h1>
-          <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl flex font-bold tracking-tight  font-sans gap-3  ">
+          <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl flex font-bold tracking-tight  font-sans gap-3  ">
             Mathav{" "}
             <span className="flex">
               Ramalingam
@@ -27,7 +27,7 @@ export const Home = () => {
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 w-6 h-8 md:ml-4 md:w-8 md:h-14 lg:w-10 lg:h-16 hover:animate-handshake"
+              className="ml-2 w-8 h-11 md:ml-4 md:w-8 md:h-14 lg:w-10 lg:h-16 hover:animate-handshake"
             >
               <path
                 d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"

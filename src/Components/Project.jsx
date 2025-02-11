@@ -15,7 +15,7 @@ export const Project = () => {
           My<span className=" text-violet-600">Projects</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8    p-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16    p-8 ">
           {/* Card 1 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
