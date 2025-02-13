@@ -14,10 +14,10 @@ export const Home = () => {
       <main className="block lg:flex bg-white dark:bg-[#1a1a1a] text-black dark:text-white " id="home">
         {/* Left Section */}
         <div className="p-5 pt-14 pl-14 md:pl-24 lg:w-1/2 md:p-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight  font-sans  lg:pt-24 ">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight  font-sans  lg:pt-24 ">
             Hi, I'm
           </h1>
-          <h1 className="mt-3 text-4xl md:text-5xl lg:text-6xl flex font-bold tracking-tight  font-sans gap-3  ">
+          <h1 className="mt-4 text-3xl md:text-5xl lg:text-6xl flex font-bold tracking-tight  font-sans gap-3  ">
             Mathav{" "}
             <span className="flex">
               Ramalingam
@@ -72,7 +72,7 @@ export const Home = () => {
             </svg>
             </span>
           </h1>
-          <h1 className="mt-4 text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans  pb-6">
+          <h1 className="mt-3 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight font-sans  pb-6">
             <Typewriter 
               options={{
                 strings: ["empty </> ", "Developer"],
@@ -90,7 +90,7 @@ export const Home = () => {
         <div>
           <img
             src={profile}
-            className="w-80 md:w-96 lg:w-96 rounded-full grayscale-0 hover:grayscale "
+            className="w-80 md:w-96 lg:w-96 rounded-full grayscale-0 hover:grayscale border-radius: 35% 65% 49% 51% / 73% 23% 77% 27%; "
           >
           </img>
         </div>
