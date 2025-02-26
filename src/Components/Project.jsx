@@ -1,7 +1,7 @@
 import React from "react";
 import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
 import HMS from "../assets/Image/HMS.png";
-import DVBC from "../assets/Image/DVBC.jpeg";
+import DVBC from "../assets/Image/DVBC.png";
 import port from "../assets/Image/port.png";
 import ext from "../assets/Image/ext.png";
 import { FaGithub } from "react-icons/fa";
@@ -19,11 +19,12 @@ export const Project = () => {
           {/* Card 1 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
-            <div className="h-[50vh] ">
+            <div className="h-[50vh] w-full flex justify-center items-center">
               <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
+                className=" object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
                 src={DVBC}
                 alt="Project Image"
+
               />
             </div>
 

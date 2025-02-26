@@ -37,7 +37,7 @@ export const About = () => {
             alt="About gif"
             ref={tiltRef}
           />
-          <div className="hidden lg:flex absolute bottom-8 left-5 cursor-pointer hover:scale-110 transition-transform">
+          <div className="hidden lg:flex absolute bottom-7 left-5 cursor-pointer hover:scale-110 transition-transform">
             <a href="#home">
               <BiSolidUpArrowCircle className="text-5xl" />
             </a>
@@ -51,12 +51,13 @@ export const About = () => {
           transition={{ duration: 1.4 }}
           className="relative lg:w-1/2 pb-2 px-6"
         >
-          <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8 lg:mt-28 font-bold tracking-tight font-sans">
+          <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8  font-bold tracking-tight font-sans bg-red-700">
             <p className="text-xl md:text-2xl">
               I am a passionate developer with an interest in
               <span className="text-violet-500"> Python, Computer Network, and Backend Development</span>.
               Driven by curiosity and creativity, I enjoy solving complex problems and creating impactful,
               user-focused solutions.
+             
             </p>
             <div className="mt-5 md:mt-7">
               <a
