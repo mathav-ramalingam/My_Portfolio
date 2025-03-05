@@ -137,7 +137,7 @@ export const Skills = () => {
             className="relative mb-10 md:mb-0"
             initial={{ opacity: 0, y: -200 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 4 }}
+            transition={{ duration: 2 }}
           >
             {/* Wrap the content inside another div so animation applies only to content */}
             <motion.div
@@ -193,13 +193,13 @@ export const Skills = () => {
             className="relative"
             initial={{ opacity: 0, y: -200 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 4 }}
+            transition={{ duration: 1 }}
           >
             {/* Animated Content */}
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.1 }}
+              transition={{ duration: 1.5 }}
             >
               <div className="mx-8 md:py-1 md:mt-8 border-cyan-200 border-2 shadow-custom rounded-3xl animate-slideup">
                 <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2">

@@ -51,7 +51,7 @@ export const About = () => {
           transition={{ duration: 1.4 }}
           className="relative lg:w-1/2 pb-2 px-6"
         >
-          <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8  font-bold tracking-tight font-sans bg-red-700">
+          <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8 md:mt-28  font-bold tracking-tight font-sans bg-red-500 ">
             <p className="text-xl md:text-2xl">
               I am a passionate developer with an interest in
               <span className="text-violet-500"> Python, Computer Network, and Backend Development</span>.

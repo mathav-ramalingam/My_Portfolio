@@ -86,15 +86,15 @@ export const Home = () => {
 
 
         {/*Right */}
-      <diV className="relative p-4 lg:w-1/2 flex flex-col items-center md:px-20 md:pt-16 lg:pt-24 md:pb-16 lg:pb-28 ">
+      <diV className="relative p-4 lg:w-3/4 flex flex-col items-center md:px-20 md:pt-16 lg:pt-20 md:pb-16 lg:pb-28 ">
         <div>
           <img
             src={profile}
-            className="w-80 md:w-96 lg:w-96 rounded-full grayscale-0 hover:grayscale border-radius: 35% 65% 49% 51% / 73% 23% 77% 27%; "
+            className="w-80 md:w-96 lg:w-[450px] rounded-full grayscale-0 hover:grayscale border-radius: 35% 65% 49% 51% / 73% 23% 77% 27%; "
           >
           </img>
         </div>
-          <div className="absolute bottom-4 right-4 hidden sm:block cursor-pointer hover:scale-110 transition-transform">
+          <div className="absolute bottom-8 right-4 hidden sm:block cursor-pointer hover:scale-110 transition-transform">
           <a href="#about"><BiSolidDownArrowCircle className=" text-5xl hover:scale-110 transition" /></a>
           </div>
         </diV>
