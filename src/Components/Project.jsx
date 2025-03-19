@@ -10,12 +10,15 @@ import { IoIosRocket } from "react-icons/io";
 export const Project = () => {
   return (
     <>
-      <div id="project" className=" relative bg-white dark:bg-[#1a1a1a] text-black dark:text-white " >
+      <div
+        id="project"
+        className=" relative bg-white dark:bg-[#1a1a1a] text-black dark:text-white "
+      >
         <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 gap-2 ">
           My<span className=" text-violet-600">Projects</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16    p-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 p-8 ">
           {/* Card 1 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
@@ -24,28 +27,31 @@ export const Project = () => {
                 className=" object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
                 src={DVBC}
                 alt="Project Image"
-
               />
             </div>
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
 
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
               <h1 className="text-2xl font-bold tracking-tight text-white font-sans pt-14 md:pt-12">
-              Dustless Vacuum Board Cleaner
+                Dustless Vacuum Board Cleaner
               </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-              I worked on developing a Rechargeable Dustless Vacuum Board Cleaner that eliminates chalk dust from blackboards effectively without releasing dust into the air.
-              This project aimed to address health concerns related to chalk dust exposure in classrooms, while also providing an efficient and user-friendly cleaning tool.
+              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px  ">
+                I worked on developing a Rechargeable Dustless Vacuum Board
+                Cleaner that eliminates chalk dust from blackboards effectively
+                without releasing dust into the air. This project aimed to
+                address health concerns related to chalk dust exposure in
+                classrooms, while also providing an efficient and user-friendly
+                cleaning tool.
               </p>
               <div className=" w-full flex justify-around  lg:pt-3 pt-0">
-              <button
-                   onClick={() =>
+                <button
+                  onClick={() =>
                     window.open(
-                      'https://www.linkedin.com/in/mathav-ramalingam/',
-                      '_blank'
+                      "https://www.linkedin.com/in/mathav-ramalingam/",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -60,9 +66,9 @@ export const Project = () => {
           {/* Card 2 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
-            <div className="h-[50vh] ">
+            <div className="p-1">
               <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
+                className="object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
                 src={HMS}
                 alt="Project Image"
               />
@@ -73,7 +79,7 @@ export const Project = () => {
 
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-2xl font-bold tracking-tight text-white font-sans pt-12 ">
+              <h1 className="text-2xl font-bold tracking-tight text-white font-sans   ">
                 Hospital Management System using Python
               </h1>
               <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
@@ -84,11 +90,11 @@ export const Project = () => {
                 integration.
               </p>
               <div className=" w-full flex justify-around  lg:pt-3 pt-0 ">
-              <button
-                   onClick={() =>
+                <button
+                  onClick={() =>
                     window.open(
-                      'https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git',
-                      '_blank'
+                      "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -99,7 +105,6 @@ export const Project = () => {
               </div>
             </div>
           </div>
-
 
           {/* Card 3 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
@@ -118,19 +123,22 @@ export const Project = () => {
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
               <h1 className="text-2xl font-bold tracking-tight text-white font-sans pt-12 ">
-               HerProTech - Women Safety Analytics
+                HerProTech - Women Safety Analytics
               </h1>
               <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-0">
-              Our project enhances women's safety using AI-powered surveillance and real-time monitoring. 
-              It analyzes live CCTV footage to detect unsafe situations, trigger SOS alerts, and upload crime data to the cloud for hotspot identification.
-              A companion mobile app enables users to discreetly send emergency alerts via voice recognition for swift assistance
+                Our project enhances women's safety using AI-powered
+                surveillance and real-time monitoring. It analyzes live CCTV
+                footage to detect unsafe situations, trigger SOS alerts, and
+                upload crime data to the cloud for hotspot identification. A
+                companion mobile app enables users to discreetly send emergency
+                alerts via voice recognition for swift assistance
               </p>
               <div className=" w-full flex justify-around lg:pt-3 pt-0">
-              <button
-                   onClick={() =>
+                <button
+                  onClick={() =>
                     window.open(
-                      'https://github.com/mathav-ramalingam/Women_Safety_Analytics',
-                      '_blank'
+                      "https://github.com/mathav-ramalingam/Women_Safety_Analytics",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -140,10 +148,10 @@ export const Project = () => {
                 </button>
 
                 <button
-                   onClick={() =>
+                  onClick={() =>
                     window.open(
-                      'https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git',
-                      '_blank'
+                      "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -155,10 +163,8 @@ export const Project = () => {
             </div>
           </div>
 
-
-
-           {/* Card 4 */}
-           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
+          {/* Card 4 */}
+          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
             {/* Image */}
             <div className="h-[50vh] ">
               <img
@@ -174,18 +180,21 @@ export const Project = () => {
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
               <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-               My Portfolio
+                My Portfolio
               </h1>
               <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio alias architecto, explicabo molestiae laudantium repudiandae magnam. 
-              Officia quam reprehenderit debitis pariatur in eligendi? Consequuntur soluta consequatur ab placeat culpa commodi.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio alias architecto, explicabo molestiae laudantium
+                repudiandae magnam. Officia quam reprehenderit debitis pariatur
+                in eligendi? Consequuntur soluta consequatur ab placeat culpa
+                commodi.
               </p>
               <div className=" w-full flex justify-around lg:pt-3 pt-0">
-              <button
-                   onClick={() =>
+                <button
+                  onClick={() =>
                     window.open(
-                      'https://github.com/mathav-ramalingam/My_Portfolio',
-                      '_blank'
+                      "https://github.com/mathav-ramalingam/My_Portfolio",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -195,12 +204,7 @@ export const Project = () => {
                 </button>
 
                 <button
-                   onClick={() =>
-                    window.open(
-                      '#render link',
-                      '_blank'
-                    )
-                  }
+                  onClick={() => window.open("#render link", "_blank")}
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
                 >
                   <IoIosRocket className="text-xl" />
@@ -209,8 +213,6 @@ export const Project = () => {
               </div>
             </div>
           </div>
-
-
 
           {/* Card 5 */}
           <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
@@ -229,18 +231,21 @@ export const Project = () => {
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
               <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-               Expense Tracker 
+                Expense Tracker
               </h1>
               <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio alias architecto, explicabo molestiae laudantium repudiandae magnam. 
-              Officia quam reprehenderit debitis pariatur in eligendi? Consequuntur soluta consequatur ab placeat culpa commodi.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio alias architecto, explicabo molestiae laudantium
+                repudiandae magnam. Officia quam reprehenderit debitis pariatur
+                in eligendi? Consequuntur soluta consequatur ab placeat culpa
+                commodi.
               </p>
               <div className=" w-full flex justify-around lg:pt-3 pt-0">
-              <button
-                   onClick={() =>
+                <button
+                  onClick={() =>
                     window.open(
-                      'https://github.com/mathav-ramalingam/Expense_Tracker',
-                      '_blank'
+                      "https://github.com/mathav-ramalingam/Expense_Tracker",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -250,10 +255,10 @@ export const Project = () => {
                 </button>
 
                 <button
-                   onClick={() =>
+                  onClick={() =>
                     window.open(
-                      'https://mr-expense-tracker.vercel.app/',
-                      '_blank'
+                      "https://mr-expense-tracker.vercel.app/",
+                      "_blank"
                     )
                   }
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
@@ -282,20 +287,18 @@ export const Project = () => {
             {/* Text Content */}
             <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
               <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-               empty
+                empty
               </h1>
               <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio alias architecto, explicabo molestiae laudantium repudiandae magnam. 
-              Officia quam reprehenderit debitis pariatur in eligendi? Consequuntur soluta consequatur ab placeat culpa commodi.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio alias architecto, explicabo molestiae laudantium
+                repudiandae magnam. Officia quam reprehenderit debitis pariatur
+                in eligendi? Consequuntur soluta consequatur ab placeat culpa
+                commodi.
               </p>
               <div className=" w-full flex justify-around lg:pt-3 pt-0">
-              <button
-                   onClick={() =>
-                    window.open(
-                      '#',
-                      '_blank'
-                    )
-                  }
+                <button
+                  onClick={() => window.open("#", "_blank")}
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
                 >
                   <FaGithub className="text-xl" />
@@ -303,12 +306,7 @@ export const Project = () => {
                 </button>
 
                 <button
-                   onClick={() =>
-                    window.open(
-                      '#',
-                      '_blank'
-                    )
-                  }
+                  onClick={() => window.open("#", "_blank")}
                   className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
                 >
                   <IoIosRocket className="text-xl" />
@@ -318,7 +316,6 @@ export const Project = () => {
             </div>
           </div>
         </div>
-
 
         <div className=" flex justify-between">
           <div className="hidden md:block  pl-6 ">

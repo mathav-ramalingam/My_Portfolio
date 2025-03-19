@@ -19,8 +19,11 @@ export const About = () => {
   }, []);
 
   return (
-    <div id="about" className="pt-5 md:pt-20 bg-white dark:bg-[#1a1a1a] text-black dark:text-white">
-      <div className="p-2 pb-8 py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl lg:py-1 gap-2">
+    <div
+      id="about"
+      className="pt-5 md:pt-20 bg-white dark:bg-[#1a1a1a] text-black dark:text-white"
+    >
+      <div className="p-2 pb-8 py-2 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl lg:py-0 gap-2">
         About <span className="text-violet-600"> Me</span>
       </div>
       <main className="block lg:flex lg:pb-0">
@@ -28,7 +31,7 @@ export const About = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.0  }}
+          transition={{ duration: 1.0 }}
           className="relative lg:p-20 lg:w-3/4 lg:pt-14 flex justify-center"
         >
           <img
@@ -49,15 +52,20 @@ export const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4 }}
-          className="relative lg:w-1/2 pb-2 px-6"
+          className="relative lg:w-1/2 pb-2"
         >
-          <div className="m-3 p-6 pt-1 text-base rounded-lg md:px-6 md:py-8 md:mt-28  font-bold tracking-tight font-sans bg-red-500 ">
+          <div className="p-6 text-base rounded-lg lg:px-6 md:py-8 lg:mt-24 font-bold tracking-tight font-sans text-justify">
             <p className="text-xl md:text-2xl">
-              I am a passionate developer with an interest in
-              <span className="text-violet-500"> Python, Computer Network, and Backend Development</span>.
-              Driven by curiosity and creativity, I enjoy solving complex problems and creating impactful,
-              user-focused solutions.
-             
+              Passionate Computer Science and Engineering enthusiast
+              specializing in
+              <span className="text-violet-500">
+                {" "}
+                Python, Computer Network, and Backend Technologies
+              </span>
+              . Skilled in building scalable solutions, solving complex
+              problems, and optimizing performance. Committed to continuous
+              learning, innovation, and delivering high-quality software
+              solutions.
             </p>
             <div className="mt-5 md:mt-7">
               <a
