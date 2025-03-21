@@ -38,6 +38,9 @@ export const Navbar = () => {
                 <a href="#project">Project</a>
               </li>
               <li>
+                <a href="#certification">Certification</a>
+              </li>
+              <li>
                 <a href="#contact">Contact</a>
               </li>
               <li>
@@ -114,6 +117,9 @@ export const Navbar = () => {
             </a>
             <a href="#project" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Project
+            </a>
+            <a href="#certification" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
+              Certification
             </a>
             <a href="#contact" className="block px-3 py-2 hover:bg-gray-700" onClick={toggleMenu}>
               Contact

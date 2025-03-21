@@ -23,16 +23,16 @@ export const About = () => {
       id="about"
       className="pt-5 md:pt-20 bg-white dark:bg-[#1a1a1a] text-black dark:text-white"
     >
-      <div className="p-2 pb-8 py-2 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl lg:py-0 gap-2">
-        About <span className="text-violet-600"> Me</span>
+      <div className="text-2xl md:text-4xl font-bold tracking-tight font-sans text-center mb-5 lg:pt-5 lg:-mb-4">
+        About <span className="text-violet-600">Me</span>
       </div>
-      <main className="block lg:flex lg:pb-0">
+      <main className="block lg:flex lg:pb-0  ">
         {/* Left Section */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.8 }}  
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.0 }}
-          className="relative lg:p-20 lg:w-3/4 lg:pt-14 flex justify-center"
+          className="relative lg:p-20 lg:w-3/4 lg:pt-14 flex justify-center "
         >
           <img
             src={gif}
@@ -54,7 +54,7 @@ export const About = () => {
           transition={{ duration: 1.4 }}
           className="relative lg:w-1/2 pb-2"
         >
-          <div className="p-6 text-base rounded-lg lg:px-6 md:py-8 lg:mt-24 font-bold tracking-tight font-sans text-justify">
+          <div className="p-6 text-base rounded-lg lg:pr-16 md:py-8 lg:mt-24 font-bold tracking-tight font-sans text-justify ">
             <p className="text-xl md:text-2xl">
               Passionate Computer Science and Engineering enthusiast
               specializing in

@@ -6,6 +6,7 @@ import { About } from './About'
 import { Skills } from "./Skills";
 import { Project } from "./Project";
 import { Contact } from "./Contact";
+import { Certifications } from "./Certifications";
 
 export const Home = () => {
   return (
@@ -72,7 +73,7 @@ export const Home = () => {
             </svg>
             </span>
           </h1>
-          <h1 className="mt-3 text-3xl md:text-5xl lg:text-5xl font-bold tracking-tight font-sans  pb-6">
+          <h1 className="mt-3 text-3xl md:text-5xl lg:text-5xl font-bold tracking-tight font-sans pb-6">
             <Typewriter 
               options={{
                 strings: ["empty </> ", "Developer"],
@@ -105,6 +106,7 @@ export const Home = () => {
       <About />
       <Skills />
       <Project />
+      <Certifications />
       <Contact />
 
     </>

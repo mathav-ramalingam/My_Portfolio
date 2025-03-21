@@ -1,323 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
+import { IoIosRocket } from "react-icons/io";
 import HMS from "../assets/Image/HMS.png";
 import DVBC from "../assets/Image/DVBC.png";
 import port from "../assets/Image/port.png";
 import ext from "../assets/Image/ext.png";
-import { FaGithub } from "react-icons/fa";
-import { IoIosRocket } from "react-icons/io";
+
+
+const projects = [
+  {
+    id: 1,
+    title: "Dustless Vacuum Board Cleaner",
+    image: DVBC,
+    description:
+      "A rechargeable dustless vacuum board cleaner that eliminates chalk dust from blackboards effectively.",
+    github: "https://github.com/mathav-ramalingam",
+  },
+  {
+    id: 2,
+    title: "Hospital Management System",
+    image: HMS,
+    description:
+      "A Python-based system to streamline hospital operations, manage patient records, and appointments efficiently.",
+    github: "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+  },
+  {
+    id: 3,
+    title: "HerProTech - Women Safety Analytics",
+    image: HMS,
+    description:
+      "An AI-powered surveillance system for real-time monitoring to enhance women's safety.",
+    github: "https://github.com/mathav-ramalingam/Women_Safety_Analytics",
+    live: "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+  },
+  {
+    id: 4,
+    title: "My Portfolio",
+    image: port,
+    description: "A personal portfolio showcasing projects and technical skills.",
+    github: "https://github.com/mathav-ramalingam/My_Portfolio",
+    live: "#render link",
+  },
+  {
+    id: 5,
+    title: "Expense Tracker",
+    image: ext,
+    description:
+      "A simple expense tracking application to manage daily expenses efficiently.",
+    github: "https://github.com/mathav-ramalingam/Expense_Tracker",
+    live: "https://mr-expense-tracker.vercel.app/",
+  },
+  
+];
 
 export const Project = () => {
+  const [flipped, setFlipped] = useState({});
+
+  const handleFlip = (id, isFlipped) => {
+    setFlipped((prev) => ({ ...prev, [id]: isFlipped }));
+  };
+
   return (
     <>
-      <div
-        id="project"
-        className=" relative bg-white dark:bg-[#1a1a1a] text-black dark:text-white "
-      >
-        <div className=" p-2 py-10 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-10 lg:pt-20 gap-2 ">
-          My<span className=" text-violet-600">Projects</span>
-        </div>
+    <div id="project" className="bg-white dark:bg-[#1a1a1a] text-black dark:text-white py-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="text-2xl md:text-4xl font-bold tracking-tight font-sans text-center mb-10 lg:pt-10">
+        My <span className="text-violet-600">Projects</span>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 p-8 ">
-          {/* Card 1 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="h-[50vh] w-full flex justify-center items-center">
-              <img
-                className=" object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={DVBC}
-                alt="Project Image"
-              />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        {projects.map((project) => (
+          <ReactCardFlip
+            key={project.id}
+            isFlipped={flipped[project.id] || false}
+            flipDirection="horizontal"
+          >
+            {/* Front Side (Image) */}
+            <div
+              className="relative h-60 md:h-64 w-full flex justify-center items-center cursor-pointer shadow-lg rounded-lg overflow-hidden"
+              onMouseEnter={() => handleFlip(project.id, true)}
+            >
+              <img className="w-full h-full object-cover" src={project.image} alt={project.title} />
             </div>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-2xl font-bold tracking-tight text-white font-sans pt-14 md:pt-12">
-                Dustless Vacuum Board Cleaner
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px  ">
-                I worked on developing a Rechargeable Dustless Vacuum Board
-                Cleaner that eliminates chalk dust from blackboards effectively
-                without releasing dust into the air. This project aimed to
-                address health concerns related to chalk dust exposure in
-                classrooms, while also providing an efficient and user-friendly
-                cleaning tool.
-              </p>
-              <div className=" w-full flex justify-around  lg:pt-3 pt-0">
+            {/* Back Side (Details) */}
+            <div
+              className="relative flex flex-col justify-center items-center bg-gray-800 text-white h-60 md:h-64 p-4 rounded-lg cursor-pointer shadow-lg"
+              onMouseLeave={() => handleFlip(project.id, false)}
+            >
+              <h1 className="text-lg md:text-xl font-bold mb-2 text-center">{project.title}</h1>
+              <p className="text-sm text-center md:text-base">{project.description}</p>
+              <div className="mt-4 flex gap-4 md:gap-6">
                 <button
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/mathav-ramalingam/",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
+                  onClick={() => window.open(project.github, "_blank")}
+                  className="flex items-center gap-2 bg-gray-600 py-2 px-3 md:py-2.5 md:px-4 rounded-lg text-white hover:bg-gray-700 transition"
                 >
-                  <FaGithub className="text-xl" />
-                  GitHub
+                  <FaGithub /> GitHub
                 </button>
+                {project.live && (
+                  <button
+                    onClick={() => window.open(project.live, "_blank")}
+                    className="flex items-center gap-2 bg-blue-600 py-2 px-3 md:py-2.5 md:px-4 rounded-lg text-white hover:bg-blue-700 transition"
+                  >
+                    <IoIosRocket /> Go Live
+                  </button>
+                )}
               </div>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="p-1">
-              <img
-                className="object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={HMS}
-                alt="Project Image"
-              />
-            </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-2xl font-bold tracking-tight text-white font-sans   ">
-                Hospital Management System using Python
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-                A Python-based system to streamline hospital operations, manage
-                patient records, doctor details, appointments, and billing
-                efficiently. It features an intuitive interface and secure data
-                management, showcasing expertise in Python and database
-                integration.
-              </p>
-              <div className=" w-full flex justify-around  lg:pt-3 pt-0 ">
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <FaGithub className="text-xl" />
-                  GitHub
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="h-[50vh] ">
-              <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={HMS}
-                alt="Project Image"
-              />
-            </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-2xl font-bold tracking-tight text-white font-sans pt-12 ">
-                HerProTech - Women Safety Analytics
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-0">
-                Our project enhances women's safety using AI-powered
-                surveillance and real-time monitoring. It analyzes live CCTV
-                footage to detect unsafe situations, trigger SOS alerts, and
-                upload crime data to the cloud for hotspot identification. A
-                companion mobile app enables users to discreetly send emergency
-                alerts via voice recognition for swift assistance
-              </p>
-              <div className=" w-full flex justify-around lg:pt-3 pt-0">
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/mathav-ramalingam/Women_Safety_Analytics",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <FaGithub className="text-xl" />
-                  GitHub
-                </button>
-
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <IoIosRocket className="text-xl" />
-                  Go Live
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="h-[50vh] ">
-              <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={port}
-                alt="Project Image"
-              />
-            </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-                My Portfolio
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Distinctio alias architecto, explicabo molestiae laudantium
-                repudiandae magnam. Officia quam reprehenderit debitis pariatur
-                in eligendi? Consequuntur soluta consequatur ab placeat culpa
-                commodi.
-              </p>
-              <div className=" w-full flex justify-around lg:pt-3 pt-0">
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/mathav-ramalingam/My_Portfolio",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <FaGithub className="text-xl" />
-                  GitHub
-                </button>
-
-                <button
-                  onClick={() => window.open("#render link", "_blank")}
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <IoIosRocket className="text-xl" />
-                  Go Live
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="h-[50vh] ">
-              <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={ext}
-                alt="Project Image"
-              />
-            </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-                Expense Tracker
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Distinctio alias architecto, explicabo molestiae laudantium
-                repudiandae magnam. Officia quam reprehenderit debitis pariatur
-                in eligendi? Consequuntur soluta consequatur ab placeat culpa
-                commodi.
-              </p>
-              <div className=" w-full flex justify-around lg:pt-3 pt-0">
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/mathav-ramalingam/Expense_Tracker",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <FaGithub className="text-xl" />
-                  GitHub
-                </button>
-
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://mr-expense-tracker.vercel.app/",
-                      "_blank"
-                    )
-                  }
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <IoIosRocket className="text-xl" />
-                  Go Live
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div className="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-[#262626] transition-shadow rounded-md">
-            {/* Image */}
-            <div className="h-[50vh] ">
-              <img
-                className="h-full w-full object-cover group-hover:rotate-6 group-hover:scale-125 transition-transform duration-700"
-                src={ext}
-                alt="Project Image"
-              />
-            </div>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black group-hover:from-black/70 group-hover:via-black group-hover:to-black transition-all duration-500"></div>
-
-            {/* Text Content */}
-            <div className=" absolute inset-0 flex flex-col items-center text-center group-hover:justify-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500 rounded-2xl ">
-              <h1 className="text-3xl font-bold tracking-tight text-white font-sans pt-12 ">
-                empty
-              </h1>
-              <p className="text-base italic text-gray-200 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Distinctio alias architecto, explicabo molestiae laudantium
-                repudiandae magnam. Officia quam reprehenderit debitis pariatur
-                in eligendi? Consequuntur soluta consequatur ab placeat culpa
-                commodi.
-              </p>
-              <div className=" w-full flex justify-around lg:pt-3 pt-0">
-                <button
-                  onClick={() => window.open("#", "_blank")}
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <FaGithub className="text-xl" />
-                  GitHub
-                </button>
-
-                <button
-                  onClick={() => window.open("#", "_blank")}
-                  className="flex gap-2 rounded-lg bg-gray-500 py-2 px-5 text-sm  font-bold tracking-tight text-white font-sans  shadow shadow-black/60 transition-shadow duration-300 "
-                >
-                  <IoIosRocket className="text-xl" />
-                  Go Live
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className=" flex justify-between">
+            
+          </ReactCardFlip>
+          
+        ))}
+      </div>
+    </div>
+      <div className=" flex justify-between bg-white dark:bg-[#1a1a1a] text-black dark:text-white ">
           <div className="hidden md:block  pl-6 ">
             <a href="#skills">
               <BiSolidUpArrowCircle className="size-12  cursor-pointer hover:scale-110 transition-transform " />
@@ -331,7 +128,6 @@ export const Project = () => {
             </a>
           </div>
         </div>
-      </div>
-    </>
+      </>
   );
 };

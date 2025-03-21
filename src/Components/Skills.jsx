@@ -93,8 +93,8 @@ export const Skills = () => {
           </motion.div>
 
           <motion.div
-            className="mb-10 md:mb-0"
-            initial={{ opacity: 0, x: 200 }}
+            className="mb-10 md:mb-0 "
+            initial={{ opacity: 0, x: 100 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 3 }}
           >
@@ -186,8 +186,6 @@ export const Skills = () => {
               </a>
             </div>
           </motion.div>
-
-
 
           <motion.div
             className="relative"
