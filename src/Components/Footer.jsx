@@ -50,12 +50,10 @@ export const Footer = () => {
           <a href="#project" class=" hover:text-violet-600 font-bold tracking-tight font-sans">
             Projects
           </a>
-          <a
-            href="#contact"
-            class=" hover:text-violet-600 font-bold tracking-tight font-sans"
-          >
-           Contact
+          <a href="#certification" class=" hover:text-violet-600 font-bold tracking-tight font-sans">
+            Certification
           </a>
+          
         </nav>
 
         <p class="mt-4 text-sm  font-bold tracking-tight font-sans">

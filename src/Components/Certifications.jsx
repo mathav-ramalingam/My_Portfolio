@@ -1,31 +1,36 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import guvi from "../assets/Image/guvi.png"
+import auro from "../assets/Image/auro2.png"
+import mdb from '../assets/Image/db.png'
+import is from '../assets/Image/infosys.png'
 
 const certifications = [
   {
-    company: "Raat.ai",
-    role: "FrontEnd Dev in the MERN and MEAN Stack",
-    type: "Freelance",
-    logo: "https://your-image-link.com/raatai.png",
+    company: "GUVI",
+    role: "Python Zero to Hero",
+    type: "Certification",
+    logo: guvi,
+    
   },
   {
-    company: "CentillionLabs",
-    role: "Full Stack Developer with AWS experience in EC2, S3, and Elastic Beanstalk.",
-    type: "Internship",
-    logo: "https://your-image-link.com/centillionlabs.png",
+    company: "MongoDB",
+    role: "MongoDB Associate Developer in Python",
+    type: "Certification",
+    logo: mdb,
   },
   {
-    company: "SomeCompany",
-    role: "Backend Developer with expertise in Node.js & MongoDB.",
-    type: "Internship",
-    logo: "https://your-image-link.com/somecompany.png",
+    company: "Infosys Springboard",
+    role: "Introduction to Python",
+    type: "Certification",
+    logo: is,
   },
   {
-    company: "TechCorp",
-    role: "Cloud Engineer specialized in AWS Lambda & DynamoDB.",
+    company: "Auro Tech Solution",
+    role: "Python Developer",
     type: "Internship",
-    logo: "https://your-image-link.com/techcorp.png",
+    logo: auro,
   },
   
 
@@ -33,20 +38,20 @@ const certifications = [
 
 export const Certifications = () => {
   return (
-    <div id="certification" className="bg-white dark:bg-[#1a1a1a] text-black dark:text-white py-10">
-      <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-center mb-10">
+    <div id="certification" className="bg-white dark:bg-[#1a1a1a] text-black dark:text-white py-20">
+      <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-center mb-20">
         Certifications & <span className="text-violet-600">Internships</span>
       </h2>
 
       {/* Carousel for Small Screens (1 item per slide) */}
       <div className="md:hidden">
-        <Carousel showThumbs={false} showIndicators={true} showArrows={false} autoPlay infiniteLoop>
+        <Carousel showThumbs={false} showIndicators={true} showArrows={false} autoPlay infiniteLoop showStatus={false} >
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="bg-red-900 text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center m-5"
+              className="bg-[#262626] text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center mx-10"
             >
-              <img src={cert.logo} alt={cert.company} className="w-16 h-16 rounded-full mb-4" />
+              <img src={cert.logo} alt={cert.company} className="w-16 h-16 rounded-xl object-contain  bg-[#262626]" />
               <p className="text-lg font-semibold">{cert.role}</p>
               <p className="text-gray-400">-- {cert.company} ({cert.type})</p>
             </div>
@@ -63,20 +68,21 @@ export const Certifications = () => {
           autoPlay
           infiniteLoop
           emulateTouch
+          showStatus={false}
         >
           {certifications.reduce((acc, _, i, arr) => {
             if (i % 2 === 0) acc.push(arr.slice(i, i + 2));
             return acc;
           }, []).map((pair, index) => (
-            <div key={index} className="flex justify-center gap-6">
+            <div key={index} className="flex justify-center gap-24">
               {pair.map((cert, i) => (
                 <div
                   key={i}
-                  className="bg-gray-900 text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center w-1/2"
+                  className="bg-[#262626] text-white rounded-2xl p-6 shadow-lg flex flex-col items-center text-center w-1/2"
                 >
-                  <img src={cert.logo} alt={cert.company} className="w-16 h-16 rounded-full mb-4" />
+                  <img src={cert.logo} alt={cert.company} className="w-16 h-16 rounded-xl object-contain  bg-[#262626]" />
                   <p className="text-lg font-semibold">{cert.role}</p>
-                  <p className="text-gray-400">-- {cert.company} </p>
+                  <p className="text-gray-400">-- {cert.company} ({cert.type})</p>
                 </div>
               ))}
             </div>

@@ -4,16 +4,17 @@ import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { IoIosRocket } from "react-icons/io";
 import HMS from "../assets/Image/HMS.png";
-import DVBC from "../assets/Image/DVBC.png";
 import port from "../assets/Image/port.png";
 import ext from "../assets/Image/ext.png";
+import agri from "../assets/Image/agri.png"
+import rf from "../assets/Image/recipelogo.png"
 
 
 const projects = [
   {
     id: 1,
     title: "Dustless Vacuum Board Cleaner",
-    image: DVBC,
+    image: rf,
     description:
       "A rechargeable dustless vacuum board cleaner that eliminates chalk dust from blackboards effectively.",
     github: "https://github.com/mathav-ramalingam",
@@ -28,12 +29,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "HerProTech - Women Safety Analytics",
-    image: HMS,
+    title: "Agri Machinery INC",
+    image: agri,
     description:
       "An AI-powered surveillance system for real-time monitoring to enhance women's safety.",
     github: "https://github.com/mathav-ramalingam/Women_Safety_Analytics",
-    live: "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+    live: "",
   },
   {
     id: 4,
@@ -78,10 +79,10 @@ export const Project = () => {
           >
             {/* Front Side (Image) */}
             <div
-              className="relative h-60 md:h-64 w-full flex justify-center items-center cursor-pointer shadow-lg rounded-lg overflow-hidden"
+              className="relative h-52 md:h-56 w-full flex justify-center items-center cursor-pointer shadow-lg rounded-lg overflow-hidden"
               onMouseEnter={() => handleFlip(project.id, true)}
             >
-              <img className="w-full h-full object-cover" src={project.image} alt={project.title} />
+              <img className=" w-full h-full object-cover" src={project.image} alt={project.title} />
             </div>
 
             {/* Back Side (Details) */}
