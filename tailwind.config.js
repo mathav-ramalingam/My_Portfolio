@@ -50,9 +50,6 @@ export default {
         '300': '3.00'
       },
 
-      boxShadow: {
-        custom: '0 0 15px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5) inset',
-      },
       
 
       animation: {

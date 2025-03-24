@@ -57,7 +57,10 @@ export const Skills = () => {
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 3 }}
           >
-            <div className=" rounded-3xl md:py-1 md:mt-8 border-cyan-300 border-2 shadow-custom ">
+            <div className="rounded-3xl md:py-1 md:mt-8 border-2  
+                border-[#1a1a1a] dark:border-cyan-300 
+                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
+                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset]">
               <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl  md:pt-2 pt-2">
                 Frontend
               </div>
@@ -98,7 +101,10 @@ export const Skills = () => {
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 3 }}
           >
-            <div className=" rounded-3xl md:py-1 md:mt-8 border-cyan-300 border-2 shadow-custom">
+            <div className=" rounded-3xl md:py-1 md:mt-8 border-2  
+                border-[#1a1a1a] dark:border-cyan-300 
+                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
+                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset]">
               <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2 ">
                 Backend
               </div>
@@ -145,7 +151,10 @@ export const Skills = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.1 }}
             >
-              <div className="mx-8 my-6 md:py-1 md:mt-8 border-cyan-200 border-2 shadow-custom rounded-3xl">
+              <div className="mx-8 my-6 md:py-1 md:mt-8 border-2  
+                border-[#1a1a1a] dark:border-cyan-300 
+                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
+                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset] rounded-3xl">
                 <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2">
                   Others
                 </div>
@@ -199,7 +208,10 @@ export const Skills = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1.5 }}
             >
-              <div className="mx-8 md:py-1 md:mt-8 border-cyan-200 border-2 shadow-custom rounded-3xl animate-slideup">
+              <div className="mx-8 md:py-1 md:mt-8 border-2  
+                border-[#1a1a1a] dark:border-cyan-300 
+                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
+                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset] rounded-3xl animate-slideup">
                 <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2">
                   Tools I Use
                 </div>

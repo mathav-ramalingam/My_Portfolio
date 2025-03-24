@@ -124,7 +124,7 @@ export const Project = () => {
 
           {/* Down Arrow */}
           <div className="hidden md:block  pr-5 ">
-            <a href="#contact">
+            <a href="#certification">
               <BiSolidDownArrowCircle className="size-12 cursor-pointer hover:scale-110 transition-transform " />
             </a>
           </div>
