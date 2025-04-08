@@ -5,10 +5,11 @@ import { Home } from "./Components/Home";
 import { About } from "./Components/About";
 import { Skills } from "./Components/Skills";
 import { Certifications } from "./Components/Certifications.jsx";
-import { Project } from "./Components/Project";
+
 import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Project from "./Components/Project.jsx";
 
 // Loading Screen with GIF
 const LoadingScreen = () => (
