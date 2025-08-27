@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/Image/profile.jpg";
+import profile from "../assets/Image/mine.png";
 import { BiSolidDownArrowCircle } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
 import { About } from "./About";
