@@ -124,11 +124,12 @@
 import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { IoIosRocket } from "react-icons/io";
-import HMS from "../assets/Image/HMS.png";
+import dvbc from "../assets/Image/dvbc-2.png";
+import bsb from "../assets/Image/bsb.png";
 import port from "../assets/Image/port.png";
-import ext from "../assets/Image/ext.png";
+import jb from "../assets/Image/jb.png";
 import agri from "../assets/Image/agri.png";
-import rf from "../assets/Image/recipelogo.png";
+
 import React, { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { FaGithubAlt } from "react-icons/fa6";
@@ -137,41 +138,41 @@ import { MdRocketLaunch } from "react-icons/md";
 const Project = () => {
   const projects = [
     {
-      title: "Agri Machineries Mart",
-      desc: "I built the AGRI MACHINERIES MART website using the MERN stack , creating an easy-to-use interface where customers can browse and view varies agri products. MongoDB securely manages data, while the admin dashboard enables stock monitoring and PDF downloads. React’s responsive design provides an engaging experience, and Express.js with Node.js ensures seamless backend operations, perfect for peak seasonal demand.",
-      img: agri,
-      link: "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
-      live: "https://github.com/mathav-ramalingam/Hostipal_Management_System_using_Python.git",
+      title: "Dustless Vacuum Board Cleaner",
+      desc: "Developed a prototype solution to address a real-time classroom problem chalk dust affecting teachers and front-row students. Designed a duster with vacuum and storage chamber to collect the chalk dust while cleaning the black board, ensuring a clean and healthier environment. ",
+      img: dvbc,
+      link: "https://www.linkedin.com/in/mathav-ramalingam/details/projects/",
+      live: "https://drive.google.com/drive/folders/1ZDBgp5fPRwA3fQjOKTW_PJZeMJpQZqU5?usp=drive_link",
     },
     {
-      title: "Expense Tracker",
-      desc: "I built a Expense Tracker application using the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to manage their personal finances effectively. The app enables users to record income and expenses, categorize transactions, PDF downloads ,view their financial summary in real-time.",
-      img: ext,
-      link: "hhttps://github.com/mathav-ramalingam/Expense_Tracker.git",
-      live: "mr-expense-tracker.vercel.app",
+      title: "Bike Service Booking (Backend System)",
+      desc: "This is the backend of a Bike Service Booking Application that allows bike service station owners to manage their offered services and customer bookings. Customers can register, book services, and track booking status, while the service provider gets notified and updates service progress.",
+      img: bsb,
+      link: "https://github.com/mathav-ramalingam/Bike_service_application.git",
+      live: "https://github.com/mathav-ramalingam/Bike_service_application.git",
     },
 
     {
       title: "Personal Portfolio",
-      desc: "A responsive and modern personal portfolio website developed using React and Tailwind CSS to showcase projects, skills, and experience. The website features smooth navigation, sleek animations, and a clean UI that highlights professional and creative work effectively.",
+      desc: "A responsive and modern personal portfolio website developed using React and Tailwind CSS to showcase projects, skills, and experience. The website features smooth navigation, sleek animations, and a clean UI that highlights professional and creative work effectively. The portfolio serves as an interactive resume, providing visitors with an overview of my work in backend and full-stack development.",
       img: port,
       link: "https://github.com/mathav-ramalingam/My_Portfolio.git",
-      live: "#",
+      live: "https://www.mathavramalingam.me/",
     },
     {
-      title: "Hospital Management System",
-      desc: "A desktop-based Hospital Management System designed to streamline and automate day-to-day operations in a healthcare setting. Built using Python for backend logic, MySQL for data storage, and Tkinter for the GUI, the application offers an intuitive interface for managing patients, doctors, appointments, and billing.",
-      img: HMS,
-      link: "https://github.com/mathav-ramalingam/Agri_Machinery_INC.git",
-      live: "#",
+      title: "JobConnect",
+      desc: "It is an web-based job portal application developed using the Django framework. The platform bridges the gap between job seekers and company by providing an intuitive and interactive interface for job postings and applications. It simplifies the recruitment process for companies and offers job seekers a streamlined experience for discovering and applying to relevant job opportunities.",
+      img: jb,
+      link: "https://github.com/mathav-ramalingam/JobConnect.git",
+      live: "https://github.com/mathav-ramalingam/JobConnect.git",
     },
-    // {
-    //   title: "Responsive Home Page",
-    //   desc: "🚀 My latest project—a landing page built with React and Tailwind CSS! This was a great exercise in leveraging Tailwind's flexibility to create a clean, responsive design. The smooth integration with React made the development process efficient and enjoyable. It’s been a valuable experience in honing my front-end skills, and I'm eager to explore more with these tools. Would love to hear your thoughts!",
-    //   img: ext,
-    //   link: "https://github.com/Ajay-muthusamy/responsive-tailwind-homePage",
-    //   live: "#",
-    // },
+    {
+      title: "Agri Machinery Mart",
+      desc: "I built the AGRI MACHINERIES MART website using the MERN stack , creating an easy-to-use interface where customers can browse and view varies agri products. MongoDB securely manages data, while the admin dashboard enables stock monitoring and PDF downloads. React’s responsive design provides an engaging experience, and Express.js with Node.js ensures seamless backend operations, perfect for peak seasonal demand",
+      img: agri,
+      link: "https://github.com/mathav-ramalingam/Agri_Machinery_INC.git",
+      live: "https://agri-machinery-inc.vercel.app/",
+    },
   ];
 
   const tiltRefs = useRef([]);
