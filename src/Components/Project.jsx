@@ -124,7 +124,7 @@
 import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 import { IoIosRocket } from "react-icons/io";
-import dvbc from "../assets/Image/dvbc.png";
+import dvbc from "../assets/Image/HMS.png";
 import bsb from "../assets/Image/bsb.png";
 import port from "../assets/Image/port.png";
 import jb from "../assets/Image/jb.png";
