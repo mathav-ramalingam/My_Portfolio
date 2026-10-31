@@ -1,29 +1,27 @@
 import React from "react";
-import profile from "../assets/Image/m-7.png";
+import profile from "../assets/Image/mine.png";
 import { BiSolidDownArrowCircle } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
 import { About } from "./About";
 import { Skills } from "./Skills";
-
 import { Contact } from "./Contact";
 import { Certifications } from "./Certifications";
-import { SiCodersrank } from "react-icons/si";
 import Project from "./Project";
 
 export const Home = () => {
   return (
     <>
-      <div className="bg-white dark:bg-[#1a1a1a]">
+      <div className="overflow-x-hidden bg-white dark:bg-[#1a1a1a]">
         <main
-          className="block lg:flex bg-white dark:bg-[#1a1a1a] text-black dark:text-white "
+          className="block overflow-hidden bg-white dark:bg-[#1a1a1a] text-black dark:text-white lg:flex"
           id="home"
         >
           {/* Left Section bg-[#1a1a1a]  */}
-          <div className="p-5 pt-14 pl-14 md:pl-20 lg:w-1/2 md:p-20 lg:ml-10 ">
+          <div className="min-w-0 p-5 pt-14 md:p-20 lg:w-1/2 lg:ml-0">
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tight  font-sans  lg:pt-24 ">
-              Hi, I'm
+              Hi, I&apos;m
             </h1>
-            <h1 className="mt-4 text-3xl md:text-5xl lg:text-5xl flex font-bold tracking-tight  font-sans gap-3  ">
+            <h1 className="mt-4 flex flex-wrap gap-3 text-3xl font-bold tracking-tight font-sans md:text-5xl lg:text-5xl">
               Mathav{" "}
               <span className="flex">
                 Ramalingam
@@ -81,7 +79,7 @@ export const Home = () => {
             <h1 className="mt-3 text-3xl md:text-5xl lg:text-5xl font-bold tracking-tight font-sans pb-6">
               <Typewriter
                 options={{
-                  strings: ["Python Developer </>", "Backend Developer"],
+                  strings: ["Data Engineer ⌘ ", "Python Developer </>", "Backend Developer { }"],
                   autoStart: true,
                   loop: true,
                 }}
@@ -90,20 +88,20 @@ export const Home = () => {
           </div>
 
           {/*Right */}
-          <diV className="relative p-4 lg:w-3/4 flex flex-col items-center md:px-20 md:pt-16 lg:pt-2 md:pb-16 lg:pb-28 lg:mt-10">
+          <div className="relative flex min-w-0 flex-col items-center p-4 md:px-20 md:pt-16 md:pb-16 lg:w-1/2 lg:pt-2 lg:pb-28 lg:mt-10">
             <div>
               <img
                 src={profile}
-                className="w-80 md:w-[500px] lg:w-[500px] rounded-full grayscale-0  border-radius: 35% 65% 49% 51% / 73% 23% 77% 27%; "
-                // hover:grayscale
-              ></img>
+                alt="Mathav Ramalingam"
+                className="aspect-square h-auto w-80 max-w-full rounded-full object-cover grayscale-0 md:w-[500px] lg:w-[500px]"
+              />
             </div>
             <div className="absolute bottom-20 right-4 hidden sm:block cursor-pointer hover:scale-110 transition-transform">
               <a href="#about">
                 <BiSolidDownArrowCircle className=" text-5xl hover:scale-110 transition" />
               </a>
             </div>
-          </diV>
+          </div>
         </main>
 
         <About />

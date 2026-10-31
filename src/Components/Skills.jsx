@@ -1,259 +1,166 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { BiSolidDownArrowCircle } from "react-icons/bi";
-import { BiSolidUpArrowCircle } from "react-icons/bi";
-import py from "../assets/Image/python.png";
-import c from "../assets/Image/c.png";
-import css from "../assets/Image/css.png";
-import github from "../assets/Image/gh.png";
-import gitl from "../assets/Image/gitl.png";
-import html from "../assets/Image/html.png";
-import js from "../assets/Image/js.png";
-import njs from "../assets/Image/nodejs.png";
-import react from "../assets/Image/react.png";
-import vs from "../assets/Image/vs.png";
-import dj from "../assets/Image/dj.png";
-import mdb from "../assets/Image/mongodb.png";
-import t from "../assets/Image/tailwind-css.png";
-import e from "../assets/Image/express.png";
-import p from "../assets/Image/postman.png";
-import mysql from "../assets/Image/mysql.png";
-import canva from "../assets/Image/canva.png";
-import pyc from "../assets/Image/pycharm.png";
+import { BiSolidDownArrowCircle, BiSolidUpArrowCircle } from "react-icons/bi";
+import {
+  SiApachespark,
+  SiCss3,
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
+  SiPandas,
+  SiPostman,
+  SiPython,
+  SiReact,
+  SiSnowflake,
+} from "react-icons/si";
+import { FaChartLine, FaCode, FaDatabase, FaTable } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+
+const skillGroups = [
+  {
+    title: "Programming & Web",
+    skills: [
+      { name: "Python", icon: SiPython, color: "text-yellow-400" },
+      { name: "SQL", icon: FaDatabase, color: "text-blue-400" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-300" },
+      { name: "HTML", icon: SiHtml5, color: "text-orange-400" },
+      { name: "CSS", icon: SiCss3, color: "text-blue-400" },
+    ],
+  },
+  {
+    title: "Data Engineering & Analytics",
+    skills: [
+      { name: "Snowflake", icon: SiSnowflake, color: "text-cyan-300" },
+      { name: "NumPy", icon: FaTable, color: "text-blue-400" },
+      { name: "Pandas", icon: SiPandas, color: "text-indigo-400" },
+      { name: "Matplotlib", icon: FaChartLine, color: "text-orange-400" },
+      { name: "ETL / ELT", icon: FaCode, color: "text-violet-400" },
+      { name: "PySpark", icon: SiApachespark, color: "text-orange-300" },
+      
+    ],
+  },
+  {
+    title: "Databases & Frameworks",
+    skills: [
+      { name: "MySQL", icon: SiMysql, color: "text-blue-300" },
+      { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-400" },
+      { name: "React.js", icon: SiReact, color: "text-cyan-300" },
+      { name: "Express.js", icon: SiExpress, color: "text-gray-300" },
+    ],
+  },
+  {
+    title: "Cloud & Developer Tools",
+    skills: [
+      { name: "Git", icon: SiGit, color: "text-orange-400" },
+      { name: "GitHub", icon: SiGithub, color: "text-gray-200" },
+      { name: "Postman", icon: SiPostman, color: "text-orange-300" },
+      { name: "VS Code", icon: VscVscode, color: "text-blue-400" },
+    ],
+  },
+];
+
+const cardAnimation = (index) => {
+  const animations = [
+    { x: -120, y: 0 },
+    { x: 120, y: 0 },
+    { x: 0, y: -120 },
+    { x: 0, y: 120 },
+  ];
+
+  return animations[index % animations.length];
+};
 
 export const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    if (!sectionElement) {
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.3 } // Trigger when 30% is visible
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.3 },
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    observer.observe(sectionElement);
 
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
+    return () => observer.unobserve(sectionElement);
   }, []);
 
   return (
-    <>
-      <div
-        ref={sectionRef}
-        id="skills"
-        className="pt-4 md:pt-16 bg-white dark:bg-[#1a1a1a] text-black dark:text-white  "
-      >
-        <div className="p-2 pb-8  py-4 text-2xl flex justify-center font-bold tracking-tight font-sans md:text-4xl md:py-1  gap-2">
-          Professional<span className=" text-violet-600"> Skillset</span>
-        </div>
-        <div className="md:grid grid-cols-2 gap-10 px-4 md:px-16  ">
-          <motion.div
-            className="mb-10  md:mb-0  "
-            initial={{ opacity: 0, x: -200 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 3 }}
-          >
-            <div className="rounded-3xl md:py-1 md:mt-8 border-2  
-                border-[#1a1a1a] dark:border-cyan-300 
-                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
-                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset]">
-              <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl  md:pt-2 pt-2">
-                Frontend
-              </div>
-              <div className="p-4 grid grid-cols-2 md:grid md:grid-cols-3 gap-2 content-center md:p-6">
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img
-                    src={html}
-                    className="text-base mr-2 md:text-lg size-5"
-                  />
-                  HTML
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img src={css} className="text-base mr-2 md:text-lg size-5" />
-                  CSS
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img src={js} className="text-base mr-2 md:text-lg size-5" />
-                  JavaScript
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img
-                    src={react}
-                    className="text-base mr-2 md:text-lg size-5 animate-spin-slow"
-                  />
-                  React JS
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg   ">
-                  <img src={t} className="text-base mr-2 md:text-lg size-5" />
-                  Tailwind CSS
-                </div>
-              </div>
-            </div>
-          </motion.div>
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="overflow-hidden bg-white pt-4 text-black dark:bg-[#1a1a1a] dark:text-white md:pt-20"
+    >
+      <h2 className="mb-2 flex justify-center gap-2 p-2 py-4 text-2xl font-bold tracking-tight font-sans md:mb-10 md:py-1 md:text-4xl">
+        Professional<span className="text-violet-600">Skillset</span>
+      </h2>
 
-          <motion.div
-            className="mb-10 md:mb-0 "
-            initial={{ opacity: 0, x: 100 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 3 }}
-          >
-            <div className=" rounded-3xl md:py-1 md:mt-8 border-2  
-                border-[#1a1a1a] dark:border-cyan-300 
-                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
-                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset]">
-              <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2 ">
-                Backend
-              </div>
-              <div className="p-4 grid grid-cols-2 md:grid md:grid-cols-3 gap-2 content-center md:p-6">
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent   font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img
-                    src={dj}
-                    className="text-base mr-2 md:text-lg size-5 animate-bounce"
-                  />
-                  Django
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img src={mdb} className="text-base mr-2 md:text-lg size-5" />
-                  MongoDB
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img
-                    src={mysql}
-                    className="text-base mr-2 md:text-lg size-5"
-                  />
-                  MySQL
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg ">
-                  <img src={njs} className="text-base mr-2 md:text-lg size-6" />
-                  Node JS
-                </div>
-                <div className="text-sm py-2 flex items-center justify-center bg-transparent  font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg   ">
-                  <img src={e} className="text-base mr-2 md:text-lg size-7 " />
-                  Express JS
-                </div>
-              </div>
-            </div>
-          </motion.div>
+      <div className="relative grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 md:px-12 lg:px-16">
+        {skillGroups.map((group, index) => {
+          const animation = cardAnimation(index);
 
-          <motion.div
-            className="relative mb-10 md:mb-0"
-            initial={{ opacity: 0, y: -200 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 2 }}
-          >
-            {/* Wrap the content inside another div so animation applies only to content */}
+          return (
             <motion.div
-              initial={{ opacity: 0, y: -300 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.1 }}
+              key={group.title}
+              initial={{ opacity: 0, ...animation }}
+              animate={isVisible ? { opacity: 1, x: 0, y: 0 } : {}}
+              transition={{ duration: 1, delay: index * 0.08 }}
+              className="mb-10 min-w-0 md:mb-0"
             >
-              <div className="mx-8 my-6 md:py-1 md:mt-8 border-2  
-                border-[#1a1a1a] dark:border-cyan-300 
-                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
-                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset] rounded-3xl">
-                <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2">
-                  Others
-                </div>
-                <div className="p-4 grid grid-cols-2 md:grid md:grid-cols-2 gap-2 content-center md:p-6">
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={py}
-                      className="text-base mr-2 md:text-lg size-5 animate-flipp"
-                    />
-                    Python
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img src={c} className="text-base mr-2 md:text-lg size-5" />
-                    C
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={gitl}
-                      className="text-base mr-2 md:text-lg size-5"
-                    />
-                    Git
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={github}
-                      className="text-base mr-2 md:text-lg size-5"
-                    />
-                    GitHub
-                  </div>
+              <div
+                className="h-full rounded-3xl border-2 border-[#1a1a1a] p-2
+                  shadow-[0_0_10px_rgba(0,0,0,1.5)]
+                  dark:border-cyan-300 dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset]"
+              >
+                <h3 className="flex min-h-14 items-center justify-center text-center text-xl font-bold tracking-tight font-sans md:text-2xl">
+                  {group.title}
+                </h3>
+                <div className="grid grid-cols-2 gap-2 p-3 md:grid-cols-3 md:p-4">
+                  {group.skills.map(({ name, icon: Icon, color }) => (
+                    <div
+                      key={name}
+                      className="flex items-center justify-center gap-2 rounded-2xl bg-transparent px-1 py-3 text-sm font-medium md:text-base"
+                    >
+                      <Icon
+                        className={`shrink-0 text-lg ${color}`}
+                        aria-hidden="true"
+                      />
+                      <span>{name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
+          );
+        })}
 
-            {/* Keep arrow outside of animated section */}
-            <div className="hidden md:block absolute bottom-4 -left-11 cursor-pointer hover:scale-110 transition-transform">
-              <a href="#about">
-                <BiSolidUpArrowCircle className="size-12" />
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, y: -200 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-          >
-            {/* Animated Content */}
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.5 }}
-            >
-              <div className="mx-8 md:py-1 md:mt-8 border-2  
-                border-[#1a1a1a] dark:border-cyan-300 
-                shadow-[0_0_10px_rgba(0,0,0,1.5)] 
-                dark:shadow-[0_0_15px_rgba(0,255,255,0.5),_0_0_15px_rgba(0,255,255,0.5)_inset] rounded-3xl animate-slideup">
-                <div className="text-2xl flex justify-center font-bold tracking-tight font-sans md:text-3xl md:pt-2 pt-2">
-                  Tools I Use
-                </div>
-                <div className="p-4 grid grid-cols-2 md:grid md:grid-cols-2 gap-2 content-center md:p-6">
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={vs}
-                      className="text-base mr-2 md:text-lg size-5 animate-pulse"
-                    />
-                    VS Code
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={pyc}
-                      className="text-base mr-2 md:text-lg size-5"
-                    />
-                    PyCharm
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img src={p} className="text-base mr-2 md:text-lg size-5" />
-                    Postman
-                  </div>
-                  <div className="text-sm py-2 flex items-center justify-center bg-transparent font-medium md:px-4 md:py-3 rounded-2xl md:w-auto md:text-lg">
-                    <img
-                      src={canva}
-                      className="text-base mr-2 md:text-lg size-5"
-                    />
-                    Canva
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Arrow remains outside of the animated content */}
-            <div className="hidden md:block absolute bottom-4 -right-11 cursor-pointer hover:scale-110 transition-transform">
-              <a href="#project">
-                <BiSolidDownArrowCircle className="size-12" />
-              </a>
-            </div>
-          </motion.div>
-        </div>
+        <a
+          href="#about"
+          aria-label="Back to about"
+          className="hidden h-12 w-12 origin-center cursor-pointer transition-transform duration-300 hover:scale-110 md:flex md:items-center md:justify-center md:self-center"
+        >
+          <BiSolidUpArrowCircle className="size-12" />
+        </a>
+        <a
+          href="#project"
+          aria-label="Continue to projects"
+          className="hidden h-12 w-12 origin-center cursor-pointer justify-self-end transition-transform duration-300 hover:scale-110 md:flex md:items-center md:justify-center md:self-center"
+        >
+          <BiSolidDownArrowCircle className="size-12" />
+        </a>
       </div>
-    </>
+    </section>
   );
 };

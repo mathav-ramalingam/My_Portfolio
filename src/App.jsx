@@ -5,7 +5,6 @@ import { Home } from "./Components/Home";
 import { About } from "./Components/About";
 import { Skills } from "./Components/Skills";
 import { Certifications } from "./Components/Certifications.jsx";
-
 import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
