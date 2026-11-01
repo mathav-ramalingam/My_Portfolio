@@ -123,7 +123,7 @@
 
 import { BiSolidUpArrowCircle, BiSolidDownArrowCircle } from "react-icons/bi";
 import rsap from "../assets/Image/rsap.png";
-import dvbc from "../assets/Image/dvbc.png";
+import dvbc from "../assets/Image/DVBC.png";
 import bsb from "../assets/Image/bsb.png";
 import port from "../assets/Image/portfolio.png";
 import jb from "../assets/Image/jb.png";
